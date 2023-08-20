@@ -77,9 +77,6 @@ const WeatherInfo = ({
 );
 
 const DayNightWeatherDisplay = ({ day, night, date }: DailyForecasts) => {
-  console.log('day', day)
-  console.log('day', night)
-  console.log('day', date)
   const dateObj = new Date(date);
   const formattedDate = format(dateObj, 'EEEE, MMM d yyyy');
 

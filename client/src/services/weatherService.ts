@@ -30,8 +30,7 @@ export const useFiveDayForecast = () => {
     },
     {
       retry: false,
-      onError: (error) => {
-        console.log(error)
+      onError: () => {
         toast({
           title: 'An error occurred.',
           description: 'Failed to grab the 5 day forecast.',

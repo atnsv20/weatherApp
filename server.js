@@ -95,7 +95,6 @@ app.get('/api/favorites', async (req, res) => {
   });
 
 if (process.env.NODE_ENV === 'production') {
-    console.log('here');
     app.use(express.static('client/dist'));
 
     app.get('*', (req, res) => {
