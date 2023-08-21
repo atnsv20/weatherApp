@@ -28,6 +28,7 @@ import { RxChevronRight as ChevronRightIcon } from 'react-icons/rx';
 import { BsSunFill, BsFillMoonFill } from 'react-icons/bs';
 import { RiCelsiusLine } from 'react-icons/ri';
 import { TbLetterF } from 'react-icons/tb';
+import { AiTwotoneStar } from 'react-icons/ai';
 
 interface NavItem {
   label: string;
@@ -112,7 +113,7 @@ const NavigationBar = () => {
             variant='ghost'
             colorScheme='black'
             aria-label='Call Sage'
-            fontSize='20px'
+            fontSize={colorMode === 'light' ? '15px' : '20px'}
             icon={colorMode === 'light' ? <BsFillMoonFill /> : <BsSunFill />}
             onClick={onToggleThemeColor}
           />
@@ -225,6 +226,7 @@ const DesktopNav = () => {
           fontSize={'sm'}
           fontWeight={500}
           color={linkColor}
+          display={{ base: 'none', sm: 'block' }}
           _hover={{
             textDecoration: 'none',
             color: linkHoverColor,
@@ -232,6 +234,15 @@ const DesktopNav = () => {
         >
           Favorites
         </Box>
+
+        <IconButton
+          variant='ghost'
+          colorScheme='black'
+          aria-label='Call Sage'
+          fontSize='20px'
+          display={{ base: 'block', sm: 'none' }}
+          icon={<AiTwotoneStar />}
+        />
       </Link>
     </Stack>
   );

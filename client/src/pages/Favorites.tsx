@@ -21,7 +21,7 @@ const Favorites = () => {
 
   return (
     <Flex justify='center'>
-      <Box maxW='550px' mt='40px'>
+      <Box maxW='550px' mt='40px' px='20px'>
         {favoriteCities.map((item) => {
           return (
             <Link
@@ -34,7 +34,7 @@ const Favorites = () => {
                 p={2}
                 rounded={'md'}
                 _hover={{ bg: bgColor }}
-                minW='400px'
+                minW={{ base: '300px', sm: '400px' }}
                 borderBottom={'1px solid rgba(0,0,0,0.07)'}
               >
                 <Stack direction={'row'} align={'center'}>
