@@ -39,7 +39,11 @@ const router = createBrowserRouter([
   },
 ]);
 
-if (process.env.NODE_ENV === 'development') {
+console.log('useMocking', import.meta.env.VITE_USE_MOCKING === 'true');
+if (
+  process.env.NODE_ENV === 'development' &&
+  import.meta.env.VITE_USE_MOCKING === 'true'
+) {
   const { worker } = await import('./mocks/browser');
   worker.start();
 }
