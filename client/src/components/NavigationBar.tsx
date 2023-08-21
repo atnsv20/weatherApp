@@ -20,7 +20,7 @@ import {
   useToast,
 } from '@chakra-ui/react';
 
-import useUserStore from './state/userStore.js';
+import useUserStore from '../state/userStore.js';
 
 import { Link } from 'react-router-dom';
 

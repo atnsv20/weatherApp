@@ -5,7 +5,7 @@ import { useQuery } from 'react-query';
 import { Flex, Spinner, useColorMode, useToast } from '@chakra-ui/react';
 
 import { useUserStore } from '../state';
-import NavigationBar from '../NavigationBar';
+import NavigationBar from '../components/NavigationBar';
 
 const Layout = () => {
   const setIsMetric = useUserStore((state) => state.setIsMetric);
