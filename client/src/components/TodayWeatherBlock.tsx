@@ -22,6 +22,7 @@ const TodayWeatherBlock = ({ weatherData }) => {
   const country = searchParams.get('co');
 
   const favoriteCities = useUserStore((state) => state.favorites);
+  const isMetric = useUserStore((state) => state.isMetric);
 
   const setFavorites = useUserStore((state) => state.setFavorites);
   const [isFavorite, setFavorite] = useState(
@@ -116,7 +117,8 @@ const TodayWeatherBlock = ({ weatherData }) => {
         </FavoriteButton>
       </Flex>
       <Heading as='h1' size='4xl' fontWeight='100'>
-        {weatherData.DailyForecasts[0].Temperature.Maximum.Value}°
+        {weatherData.DailyForecasts[0].Temperature.Maximum.Value}
+        {isMetric ? '°' : ''}
       </Heading>
     </Flex>
   );

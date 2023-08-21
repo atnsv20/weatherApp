@@ -122,7 +122,7 @@ const NavigationBar = () => {
             colorScheme='black'
             aria-label='Call Sage'
             fontSize='20px'
-            icon={isMetric ? <RiCelsiusLine /> : <TbLetterF />}
+            icon={isMetric ? <TbLetterF /> : <RiCelsiusLine />}
             onClick={onToggleMetric}
           />
         </Stack>
@@ -198,7 +198,7 @@ const DesktopNav = () => {
           placeholder='Search'
           size='sm'
           width='200px'
-          variant='filled'
+          variant='outline'
         />
         <Collapse in={isOpen}>
           <LocationsDropdownContainer>
